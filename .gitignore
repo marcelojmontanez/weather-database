@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.db
+config.ini
+*.db-journal
+reqs.md
