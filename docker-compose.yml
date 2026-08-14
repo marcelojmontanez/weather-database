@@ -1,0 +1,6 @@
+services:
+  weather-pipeline:
+    build: .
+    volumes:
+      - ./config.ini:/app/config.ini
+      - ./weather.db:/app/weather.db

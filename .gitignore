@@ -1,6 +1,6 @@
-venv/
+.venv/
 __pycache__/
 *.db
-config.ini
 *.db-journal
-reqs.md
+config.ini
+SPEC.md
