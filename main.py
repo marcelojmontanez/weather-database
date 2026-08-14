@@ -1,5 +1,6 @@
 import configparser
 import logging
+import os
 import sqlite3
 import sys
 from datetime import datetime, timezone
@@ -42,7 +43,7 @@ retry = Retry(total=3,
             )
 session.mount("https://", HTTPAdapter(max_retries=retry))
 
-conn = sqlite3.connect("weather.db")
+conn = sqlite3.connect(os.getenv("WEATHER_DB_PATH", "weather.db"))
 cur = conn.cursor()
 cur.execute("""
     CREATE TABLE IF NOT EXISTS forecasts (

@@ -2,5 +2,6 @@
 __pycache__/
 *.db
 *.db-journal
+data/
 config.ini
 SPEC.md

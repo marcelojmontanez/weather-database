@@ -1,6 +1,8 @@
 services:
   weather-pipeline:
     build: .
+    environment:
+      WEATHER_DB_PATH: /data/weather.db
     volumes:
-      - ./config.ini:/app/config.ini
-      - ./weather.db:/app/weather.db
+      - ./config.ini:/app/config.ini:ro
+      - ./data:/data
