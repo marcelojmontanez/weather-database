@@ -1,4 +1,4 @@
-# Weather Pipeline
+# NWS Forecast Pipeline
 
 Fetches a point forecast from the US National Weather Service (NWS) and stores it in SQLite.
 
@@ -19,7 +19,7 @@ Set the API user agent and location in `config.ini`:
 
 ```ini
 [api]
-user_agent = weather-pipeline your-email@example.com
+user_agent = nws-forecast-pipeline your-email@example.com
 
 [location]
 latitude = 38.9072
@@ -72,4 +72,10 @@ docker compose up --build
 ```
 
 The container runs the pipeline once and exits. Its database is saved as `data/weather.db`.
+
+## Future Work
+
+- Add a forecast archive and observed-weather data to measure forecast accuracy.
+- Support environment variables for container-native configuration.
+- Add a Kubernetes CronJob for scheduled daily runs.
 

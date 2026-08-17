@@ -1,5 +1,5 @@
 services:
-  weather-pipeline:
+  nws-forecast-pipeline:
     build: .
     environment:
       WEATHER_DB_PATH: /data/weather.db
