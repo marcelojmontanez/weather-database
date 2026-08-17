@@ -59,8 +59,7 @@ The temperature unit returned by the NWS is not stored.
 Query the database with:
 
 ```bash
-sqlite3 weather.db \
-  'SELECT period_name, start_time, temperature, short_forecast FROM forecasts ORDER BY start_time LIMIT 10;'
+sqlite3 weather.db 'SELECT period_name, start_time, temperature, short_forecast FROM forecasts ORDER BY start_time LIMIT 10;'
 ```
 
 ## Docker
